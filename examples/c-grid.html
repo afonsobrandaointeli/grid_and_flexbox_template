@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo Grid Layout com Áreas Nomeadas</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+      grid-template-areas:
+        "header header header"
+        "sidebar content content"
+        "footer footer footer";
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #ddd;
+      padding: 20px;
+    }
+
+    .content {
+      grid-area: content;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">Cabeçalho</div>
+    <div class="sidebar">Barra Lateral</div>
+    <div class="content">Conteúdo Principal</div>
+    <div class="footer">Rodapé</div>
+  </div>
+</body>
+
+</html>
